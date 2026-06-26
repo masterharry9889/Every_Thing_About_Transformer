@@ -26,3 +26,10 @@ class self_attention(nn.Module):
         attention_weights = self.softmax(scores)
         output = torch.matmul(attention_weights, V)
         return output, attention_weights
+
+
+
+"""Self-attention:
+Let's each token attend directly to other tokens in same sequence: the model compares every token with
+the rest of the sequence and build a context-aware representation. This is what allows transformers to
+capture relationships accross distanceand make it possible to modellong-range dependencies without recurrence."""

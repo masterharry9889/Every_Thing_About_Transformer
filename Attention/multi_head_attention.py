@@ -35,3 +35,10 @@ class MultiHeadAttention(nn.Module):
         attn_output = attn_output.transpose(1, 2).contiguous().view(batch_size, -1, self.num_heads * self.head_dim)
         return self.out_linear(attn_output)
     
+
+
+
+"""Multi-Head Attention (MHA)
+Splits attention into multiple heads (one independent attention mechanism), so the model can learn different interaction patterns
+ in parallel. It became the defining feature of Transformers and LLMs, and it still remains the baseline for novel attention 
+ variants"""
